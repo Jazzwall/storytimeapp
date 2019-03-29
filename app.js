@@ -16,8 +16,15 @@ class Hello extends React.Component
     {
         this.setState
         (
-            {message: "my friend (state changed)!"}
+            {message: this.state.storySoFar}
         );
+    }
+
+    componentDidMount()
+    {
+        fetch("https://storytimeapi.azurewebsites.net/api/values")
+        .then(r=>this.setState({"storySoFar":r.text()}))
+        //.then(i=>this.setState({i}));
     }
 
     render()
