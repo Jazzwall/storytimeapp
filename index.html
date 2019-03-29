@@ -15,13 +15,13 @@
         {
             render()
             {
-                return <h1>Hello World!</h1>;
+                return <h1>Hello {this.props.message}!</h1>;
             }
         }
 
         //render component named Hello within DOM element "root"
         ReactDOM.render(
-            <Hello />,
+            <Hello message="my friend"/>,
             document.getElementById("root")
         );
     </script>
