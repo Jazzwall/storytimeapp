@@ -6,12 +6,24 @@
 </head>
 <body>
     <div id="root"></div>
+
+
+
     <script type="text/babel">
-    
-    /* 
-    ADD REACT CODE HERE 
-    */
-    
+        //define component named Hello
+        class Hello extends React.Component
+        {
+            render()
+            {
+                return <h1>Hello World!</h1>;
+            }
+        }
+
+        //render component named Hello within DOM element "root"
+        ReactDOM.render(
+            <Hello />,
+            document.getElementById("root")
+        );
     </script>
 </body>
 </html>
